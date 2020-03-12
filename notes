@@ -1,0 +1,91 @@
+11/16 notes - 2 hours
+	started working at 7PM, got some login info: https://cessnapilotsassociation.com/ and https://cessnapilotsassociation.com/wp-admin/
+	stopped at 9PM, spent some time trying to get Task #1 finished. looks like the Memberships page drops the user into a new menu and on the "Content" menu link.
+
+11/19 notes - 5 hours
+	started working at noon
+	updated the expiration date on all monthly woo memberships which were active and set to expire before 2018-01-31, 1286 affected
+	eventually was able to get the search working after disabling and re-enabling the theme and then adding the bbpress search widget
+	altered the menu to send user to different forum link, tried a few attempts to get the forum page to display properly but was unable to
+	stopped working at 5PM
+
+11/20 notes - 1.5 hours
+	started at 8:30
+	converted over the remaining 2700ish expired members to be active members
+	spent some time being confused about caching, also talking shit about wordpress
+	stopped at 10PM
+
+11/27 notes - 2.5 hours
+	started at 7:30
+	force display_name to be first name last name during profile update and registration
+	hide nav links on My Account > Memberships
+
+11/28 notes - 1.5 hours
+	started at 8:30
+	changed display_names to first and last across the user table where possible, 122 do not have first,last meta
+
+11/30 notes - 45 mins
+	started at 6:45
+	looking for alternatives to iframely/embed.ly. recommended baking some into our wp plugin
+
+12/11 notes - 1.5 hours
+	started at 8:15
+	renaming membership page cancel to "Cancel Membership", issues with the site not showing new file changes when plugin is uploaded
+
+1/3 notes - 2 hours
+	started at 7:30
+	restore ubbthreads forum
+
+
+
+====================================================================
+
+TODO:
+1) display_name as first, last for all users who have at least a first name
+
+
+====================================================================
+
+TODO:
+1) display_name as first name, last name via db update (make sure there are first and last names)
+
+
+CPA doesn’t think they want the following items on the left hand side of the membership screen:
+Content
+Discounts
+Notes
+
+====================================================================
+
+# In order of importance
+## Change member expiration dates
+- updated the expiration date on all monthly woo memberships which were active and set to expire before 2018-01-31, 1286 affected. you mentioned 4k users, wondering if i'm making an incorrect assumption somewhere.
+
+## Site search and forum search
+- I've added the forum search widget to the sidebar, may need css tweaking? appears to be functional though
+
+## Forum layout
+- I've added a direct link to the navigation to /forums/forum/cpa-forums/, can be edited in the wp-admin > appearence > menus. this should drop the user into the list with all the forums. i tried making the url friendlier but wordpress/bbpress wasn't having any of it
+
+## General overview of the site.
+- I think considering the confines of wordpress and all the plugins and whatnot that it looks pretty good!
+
+# Not critical
+## Add temporary forum ban feature
+- I didn't find a plugin for this nor a way for moderators to set a temporary ban. Easiest is probably a new user role which the admin can associate with a user, problem is that requires an admin
+
+## Full name
+- I think it's already doing this?
+
+## Layout
+- I think the layout is functional and it looks clean enough that most of these old pilots should be able to figure it out, i mean they can fly planes right.
+- The major item that stands out to me on the mobile nav is the fixed menu at the bottom of the viewport with the 3 buttons. It might be a good idea to display:none this as long as it doesn't hork the checkout flow too much when someone is buying something.
+- Did the copyright text used to live in the footer? I think the locations of widgets may have reset when I disabled/activated the theme.
+
+====================================================================
+
+Tasks / TODO:
+1) https://cessnapilotsassociation.com/my-account/, click on memberships. That page is just supposed to show what memberships you have. For some weird reason at some point, not sure when, it was only noticed within the past week, for some reason it now shows forum posts which it wasn’t doing before. I’m pretty sure it’s only supposed to show the Wooo memberships you’re part of
+	should link to https://cessnapilotsassociation.com/my-account/members-area/7289/my-membership-details/
+2) "The other item I’d like to work on, doesn’t have to be now or today, for context, is I’d like to change the membership expiration dates for about half the users. The way I thought I could do this didn’t work."
+
